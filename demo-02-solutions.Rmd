@@ -154,6 +154,11 @@ Tibbles sind Listen mit Vektoren einer einheitlichen Länge. Während ein Vektor
 
 ```{r tibbles}
 
+vektor_datetime_roh <- c("1970-03-05 12:20:00", "1969-04-04 10:00:00", as.character(Sys.time()))
+vektor_datetime <- ymd_hms(vektor_datetime_roh)
+as.double(vektor_datetime)
+
+
 inventar <- tibble(
   zeit = vektor_datetime,
   frucht = vektor_chr,
